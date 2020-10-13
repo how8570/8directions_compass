@@ -1,5 +1,10 @@
 let facing_degree = 0
 /**
+ * 按 A 顯示角度
+ * 
+ * debug 用
+ */
+/**
  * 實作角度區間為 ( θ_1 , θ_2 ]   (左開又閉)
  * 
  * 參考角度如下:
@@ -36,6 +41,9 @@ let facing_degree = 0
  * 
  * 分為 337.5~0度(360度) "或" 0~22.5度 兩邊
  */
+input.onButtonPressed(Button.A, function () {
+    basic.showNumber(facing_degree)
+})
 basic.forever(function () {
     facing_degree = input.compassHeading()
     if (22.5 < facing_degree && facing_degree <= 67.5) {
