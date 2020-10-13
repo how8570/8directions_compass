@@ -60,7 +60,7 @@ basic.forever(function () {
         basic.showArrow(ArrowNames.West)
     } else if (292.5 < facing_degree && facing_degree <= 337.5) {
         basic.showArrow(ArrowNames.NorthWest)
-    } else if (337.5 > facing_degree || facing_degree < 22.5) {
+    } else if (337.5 <= facing_degree || facing_degree < 22.5) {
         basic.showArrow(ArrowNames.North)
     } else {
         basic.showString("ERROR")
